@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" 
+autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" 
+circular="{{circular}}" indicatorActiveColor="{{indicatorActiveColor}}" indicatorColor="{{indicatorColor}}" class='swiper_box'>
+  <block wx:for="{{imgUrls}}" wx:for-item="item"  wx:for-index="idx" wx:key="unique">
+    <swiper-item class='swiper_box_img'>
+      <image src="{{item}}" class="slide-image"  mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="Data_box">
+  <view class='h3'>逝去的青春</view>
+  <view class='Youth'>
+    <view class='Youth_left Youth_img' bindtap="showModul" data-hi="这才是未来">
+      <image src="../img/timg_qc.jpg" alt='青春' mode=" widthFix aspectFit" />
+      <view class="Div">模态窗口功能</view>
+    </view>
+    <view class='Youth_right Youth_img' bindtap="chooseImage">
+      <image src="{{imgUrl}}" alt='青春' mode="widthFix aspectFit" />
+       <view class="Div">本地图片上传功能</view>
+    </view>
+  </view>
+</view>
+<view class="Data_box Data_box_for">
+  <view class='h3'>逝去的爱情</view>
+  <view class='Youth' wx:for="{{YouthArray}}" wx:for-item="items" wx:key="unique">
+    <view wx:for="{{items}}" wx:for-item="item" class='{{item.class}}' wx:key="unique1">
+      <image src="{{item.url}}" alt='{{item.alt}}' mode="widthFix aspectFit" />
+    </view>
+  </view>
+</view>
