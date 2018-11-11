@@ -1,4 +1,5 @@
 //index.js
+import { $ajax } from '../../utils/ajax.js';
 //获取应用实例
 var app = getApp()
 Page({
@@ -108,8 +109,15 @@ Page({
       }
     }
   },
+  getData(){
+    $ajax('/api/getheros','get').then((res)=>{
+      console.log(res)
+    }).catch((e)=>{
+      console.error(e,5555)
+    })
+  },
   onLoad: function () {
-    console.log('onLoad')
+    this.getData();
     var that = this
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
