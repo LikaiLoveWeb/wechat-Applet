@@ -8,5 +8,30 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "执子之手",
     "navigationBarTextStyle":"black"
-  }
+  },
+    "tabBar": {
+      "color": "#333",
+      "selectedColor": "#333",
+      "borderStyle": "block",
+      "list": [
+        {
+          "selectedIconPath": "./pages/img/home_fill.png",
+          "iconPath": "./pages/img/home.png",
+          "pagePath": "pages/index/index",
+          "text": "首页"
+        },
+        {
+          "selectedIconPath": "./pages/img/round_add_fill.png",
+          "iconPath": "./pages/img/round_add.png",
+          "pagePath": "pages/logs/logs",
+          "text": "添加"
+        },
+        {
+          "selectedIconPath": "./pages/img/people_fill.png",
+          "iconPath": "./pages/img/people.png",
+          "pagePath": "pages/logs/logs",
+          "text": "我的"
+        }
+      ]
+    }
 }
