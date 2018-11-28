@@ -1,31 +1,47 @@
-<!--index.wxml-->
-<swiper indicator-dots="{{indicatorDots}}" 
-autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" 
-circular="{{circular}}" indicatorActiveColor="{{indicatorActiveColor}}" indicatorColor="{{indicatorColor}}" class='swiper_box'>
-  <block wx:for="{{imgUrls}}" wx:for-item="item"  wx:for-index="idx" wx:key="unique">
-    <swiper-item class='swiper_box_img'>
-      <image src="{{item}}" class="slide-image"  mode="widthFix" />
-    </swiper-item>
-  </block>
-</swiper>
-<view class="Data_box">
-  <view class='h3'>逝去的青春</view>
-  <view class='Youth'>
-    <view class='Youth_left Youth_img' bindtap="showModul" data-hi="这才是未来">
-      <image src="../img/timg_qc.jpg" alt='青春' mode=" widthFix aspectFit" />
-      <view class="Div">模态窗口功能</view>
-    </view>
-    <view class='Youth_right Youth_img' bindtap="chooseImage">
-      <image src="{{imgUrl}}" alt='青春' mode="widthFix aspectFit" />
-       <view class="Div">本地图片上传功能</view>
+<!--pages/index/index.wxml-->
+<view class='index_view'>
+  <view class='header_view'>
+    <image mode='aspectFill' src='../images/user_name.jpeg'></image>
+    <view class='mask'></view>
+    <view class='header_box'>
+      <view class='balance'>
+        <text>500.00</text>
+        <text>可用余额</text>
+      </view>
+      <view class='budget'>
+        <view class='bug'>
+          <text>0.00</text>
+          <text>9月收入</text>
+        </view>
+        <view class='get'>
+          <text>0.00</text>
+          <text>9月支出</text>
+        </view>
+      </view>
     </view>
   </view>
-</view>
-<view class="Data_box Data_box_for">
-  <view class='h3'>逝去的爱情</view>
-  <view class='Youth' wx:for="{{YouthArray}}" wx:for-item="items" wx:key="unique">
-    <view wx:for="{{items}}" wx:for-item="item" class='{{item.class}}' wx:key="unique1">
-      <image src="{{item.url}}" alt='{{item.alt}}' mode="widthFix aspectFit" />
+
+  <view class='log_list'>
+    <block wx:for='[1,2,3]' wx:key='index'>
+    <view class='brows'>
+     <view>
+     <text class='time'>09月29日</text>
+      <text class='week'>星期六</text>
+     </view> 
+     <view>
+      <text>支出：75</text>
+     </view>
     </view>
+    <view class='list'>
+      <view wx:for='{{[1,2,3,4]}}' wx:key='index' class='li_item'>
+        <view class='remark'>
+           <text class="iconfont icon-chihe"></text>
+           <text class='type_item'>吃喝</text>
+        </view> 
+
+        <view class='money'>15</view>
+      </view>
+    </view>
+    </block>
   </view>
 </view>

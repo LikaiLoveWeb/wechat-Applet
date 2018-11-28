@@ -1,37 +1,38 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/user/index",
+    "pages/add/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "执子之手",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "合租宝",
+    "navigationBarTextStyle": "black"
   },
-    "tabBar": {
-      "color": "#333",
-      "selectedColor": "#333",
-      "borderStyle": "block",
-      "list": [
-        {
-          "selectedIconPath": "./pages/img/home_fill.png",
-          "iconPath": "./pages/img/home.png",
-          "pagePath": "pages/index/index",
-          "text": "首页"
-        },
-        {
-          "selectedIconPath": "./pages/img/round_add_fill.png",
-          "iconPath": "./pages/img/round_add.png",
-          "pagePath": "pages/logs/logs",
-          "text": "添加"
-        },
-        {
-          "selectedIconPath": "./pages/img/people_fill.png",
-          "iconPath": "./pages/img/people.png",
-          "pagePath": "pages/logs/logs",
-          "text": "我的"
-        }
-      ]
-    }
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#333",
+    "borderStyle": "block",
+    "list": [
+      {
+        "selectedIconPath": "./pages/images/home_fill.png",
+        "iconPath": "./pages/images/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "./pages/images/add.png",
+        "iconPath": "./pages/images/add.png",
+        "pagePath": "pages/add/index",
+        "text": "发布"
+      },
+      {
+        "selectedIconPath": "./pages/images/people_fill.png",
+        "iconPath": "./pages/images/people.png",
+        "pagePath": "pages/user/index",
+        "text": "我的"
+      }
+    ]
+  }
 }
