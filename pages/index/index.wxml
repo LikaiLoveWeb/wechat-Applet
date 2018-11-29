@@ -1,47 +1,66 @@
 <!--pages/index/index.wxml-->
 <view class='index_view'>
-  <view class='header_view'>
-    <image mode='aspectFill' src='../images/user_name.jpeg'></image>
-    <view class='mask'></view>
-    <view class='header_box'>
-      <view class='balance'>
-        <text>500.00</text>
-        <text>可用余额</text>
-      </view>
-      <view class='budget'>
-        <view class='bug'>
-          <text>0.00</text>
-          <text>9月收入</text>
+  <view class='header_view' style="height:{{height_header}}vh">
+    <view class='header_view_box'>
+      <image mode='aspectFill' src='../images/user_name.jpeg'></image>
+      <view class='mask'></view>
+      <view class='header_box'>
+        <view class='balance' 
+        style="opacity:{{(height_header-15)/10}};height:{{(height_header-15)/10*60}}">
+          <text>500.00</text>
+          <text>可用余额</text>
         </view>
-        <view class='get'>
-          <text>0.00</text>
-          <text>9月支出</text>
+        <view class='budget' style="width:{{((1-(height_header-15)/10)*25+55)+'%' }}">
+          <view class='bug'>
+            <text>0.00</text>
+            <text>9月收入</text>
+          </view>
+          <view class='get'>
+            <text>0.00</text>
+            <text>9月支出</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='header_brows'>
+      <view class='brows'>
+        <view>
+          <text class='time'>09月29日</text>
+          <text class='week'>星期六</text>
+        </view>
+        <view>
+          <text>支出：75</text>
         </view>
       </view>
     </view>
   </view>
+  <scroll-view scroll-with-animation='true' scroll-top='{{scrollTop}}' class='scrollView' scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
 
-  <view class='log_list'>
-    <block wx:for='[1,2,3]' wx:key='index'>
-    <view class='brows'>
-     <view>
-     <text class='time'>09月29日</text>
-      <text class='week'>星期六</text>
-     </view> 
-     <view>
-      <text>支出：75</text>
-     </view>
-    </view>
-    <view class='list'>
-      <view wx:for='{{[1,2,3,4]}}' wx:key='index' class='li_item'>
-        <view class='remark'>
-           <text class="iconfont icon-chihe"></text>
-           <text class='type_item'>吃喝</text>
-        </view> 
+    <view class='log_list'>
+      <block wx:for='[1,2,3]' wx:key='index'>
+        <view class='brows'>
+          <view>
+            <text class='time'>09月29日</text>
+            <text class='week'>星期六</text>
+          </view>
+          <view>
+            <text>支出：75</text>
+          </view>
+        </view>
+        <view class='list'>
+          <view wx:for='{{[1,2,3,4]}}' wx:key='index' class='li_item'>
+            <view class='remark'>
+              <text class="iconfont icon-chihe"></text>
+              <text class='type_item'>吃喝</text>
+            </view>
 
-        <view class='money'>15</view>
-      </view>
+            <view class='money'>15</view>
+          </view>
+        </view>
+      </block>
     </view>
-    </block>
-  </view>
+
+  </scroll-view>
+
 </view>
